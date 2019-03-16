@@ -35,7 +35,7 @@
           <ul class="nav navbar-nav">
             <li class="active"><a href="index.php">Dashboard</a></li>
             <!--<li><a href="pages.html">Pages</a></li>-->
-            <li><a href="users.html">Analytic zone</a></li>
+            <li><a href="users.php">Analytic zone</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Welcome, Saidakbar</a></li>
@@ -84,8 +84,8 @@
               <a href="index.php" class="list-group-item active main-color-bg">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
               </a>
-              <a href="pages.html" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Pages <span class="badge">12</span></a>
-              <a href="users.html" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users <span class="badge">203</span></a>
+              <a href="pages.php" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Pages <span class="badge">12</span></a>
+              <a href="users.php" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users <span class="badge">203</span></a>
             </div>
 
            <!-- <div class="well">
@@ -154,31 +154,31 @@
                         <td>Saidakbar Makhmudkhujaev</td>
                         <td>smakhmudkhujaev@student.inha.uz</td>
                         <td>Dec 23, 2018</td>
-                         <td><a class="btn btn-default" href="edit.html">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                         <td><a class="btn btn-default" href="edit.php">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
                       </tr>
                       <tr>
                         <td>Makhmudjon Inadullaev</td>
                         <td>minadullaev@student.inha.uz</td>
                         <td>Aug 13, 2014</td>
-                         <td><a class="btn btn-default" href="edit.html">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                         <td><a class="btn btn-default" href="edit.php">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
                       </tr>
                       <tr>
                         <td>John Doe</td>
                         <td>jdoe@gmail.com</td>
                         <td>Dec 13, 2016</td>
-                         <td><a class="btn btn-default" href="edit.html">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                         <td><a class="btn btn-default" href="edit.php">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
                       </tr>
                       <tr>
                         <td>Stephanie Landon</td>
                         <td>landon@yahoo.com</td>
                         <td>Dec 14, 2016</td>
-                         <td><a class="btn btn-default" href="edit.html">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                         <td><a class="btn btn-default" href="edit.php">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
                       </tr>
                       <tr>
                         <td>Mike Johnson</td>
                         <td>mjohnson@gmail.com</td>
                         <td>Dec 15, 2016</td>
-                         <td><a class="btn btn-default" href="edit.html">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
+                         <td><a class="btn btn-default" href="edit.php">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
                       </tr>
                     </table>
                 </div>
