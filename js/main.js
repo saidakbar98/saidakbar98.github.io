@@ -1,4 +1,4 @@
-var config = {
+/*var config = {
     apiKey: "AIzaSyChQhSOGgWaBRay20YXcfd-qJIDPR1Iis8",
     authDomain: "my-project-1542388666686.firebaseapp.com",
     databaseURL: "https://my-project-1542388666686.firebaseio.com",
@@ -35,5 +35,5 @@ function login(){
     
 
 }
-
+*/
 

@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    if(!isset($_SESSION["username"])){
+        header("Location: login.html");
+        die;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -25,13 +33,13 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="index.html">Dashboard</a></li>
+            <li class="active"><a href="index.php">Dashboard</a></li>
             <!--<li><a href="pages.html">Pages</a></li>-->
             <li><a href="users.html">Analytic zone</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Welcome, Saidakbar</a></li>
-            <li><a href="login.html">Logout</a></li>
+            <li><a href="logout.php">Logout</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -73,7 +81,7 @@
         <div class="row">
           <div class="col-md-3">
             <div class="list-group">
-              <a href="index.html" class="list-group-item active main-color-bg">
+              <a href="index.php" class="list-group-item active main-color-bg">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
               </a>
               <a href="pages.html" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Pages <span class="badge">12</span></a>
