@@ -1,10 +1,18 @@
+<?php
+    session_start();
+    if(!isset($_SESSION["username"])){
+        header("Location: login.html");
+        die;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Admin Area | Users</title>
+    <title>Admin Area | Edit Page</title>
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
@@ -21,16 +29,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#">IUT snap</a>
+          <a class="navbar-brand" href="#">AdminStrap</a>
         </div>
         <div id="navbar" class="collapse navbar-collapse">
           <ul class="nav navbar-nav">
-            <li><a href="index.php">Dashboard</a></li>
-            <li class="active"><a href="users.html">Analytic zone</a></li>
+            <li><a href="index.html">Dashboard</a></li>
+           
+            <li><a href="users.html">Analytic zone</a></li>
           </ul>
           <ul class="nav navbar-nav navbar-right">
             <li><a href="#">Welcome, Saidakbar</a></li>
-            <li><a href="logout.php">Logout</a></li>
+            <li><a href="login.html">Logout</a></li>
           </ul>
         </div><!--/.nav-collapse -->
       </div>
@@ -40,7 +49,7 @@
       <div class="container">
         <div class="row">
           <div class="col-md-10">
-            <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Users <small>IUT adminstrative zone</small></h1>
+            <h1><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Edit Page<small>IUT administrative zone</small></h1>
           </div>
           <div class="col-md-2">
             <div class="dropdown create">
@@ -50,8 +59,8 @@
               </button>
               <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                 <li><a type="button" data-toggle="modal" data-target="#addPage">Send message</a></li>
-                <li><a href="#">system</a></li>
-                <li><a href="#">system</a></li>
+                <li><a href="#">System</a></li>
+                <li><a href="#">System</a></li>
               </ul>
             </div>
           </div>
@@ -62,8 +71,9 @@
     <section id="breadcrumb">
       <div class="container">
         <ol class="breadcrumb">
-          <li><a href="index.php">Dashboard</a></li>
-          <li class="active">Users</li>
+          <li><a href="index.html">Dashboard</a></li>
+          <li><a href="pages.html">Pages</a></li>
+          <li class="active">Edit Page</li>
         </ol>
       </div>
     </section>
@@ -73,15 +83,15 @@
         <div class="row">
           <div class="col-md-3">
             <div class="list-group">
-              <a href="index.php" class="list-group-item active main-color-bg">
+              <a href="index.html" class="list-group-item active main-color-bg">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span> Dashboard
               </a>
               <a href="pages.html" class="list-group-item"><span class="glyphicon glyphicon-list-alt" aria-hidden="true"></span> Pages <span class="badge">12</span></a>
-            
+             
               <a href="users.html" class="list-group-item"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> Users <span class="badge">203</span></a>
             </div>
 
-            <!--<div class="well">
+           <!-- <div class="well">
               <h4>Disk Space Used</h4>
               <div class="progress">
                   <div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
@@ -100,47 +110,35 @@
             <!-- Website Overview -->
             <div class="panel panel-default">
               <div class="panel-heading main-color-bg">
-                <h3 class="panel-title">Users</h3>
+                <h3 class="panel-title">Edit Page</h3>
               </div>
               <div class="panel-body">
-                <div class="row">
-                      <div class="col-md-12">
-                          <input class="form-control" type="text" placeholder="Filter Users...">
-                      </div>
-                </div>
-                <br>
-                <table class="table table-striped table-hover">
-                      <tr>
-                        <th>Name</th>
-                        <th>Email</th>
-                        <th>Joined</th>
-                        <th></th>
-                      </tr>
-                      <tr>
-                        <td>Jill Smith</td>
-                        <td>jillsmith@gmail.com</td>
-                        <td>Dec 12, 2016</td>
-                        <td><a class="btn btn-default" href="edit.html">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
-                      </tr>
-                      <tr>
-                        <td>Eve Jackson</td>
-                        <td>ejackson@yahoo.com</td>
-                        <td>Dec 13, 2016</td>
-                        <td><a class="btn btn-default" href="edit.html">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
-                      </tr>
-                      <tr>
-                       <td>Stephanie Landon</td>
-                        <td>landon@yahoo.com</td>
-                        <td>Dec 14, 2016</td>
-                        <td><a class="btn btn-default" href="edit.html">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
-                      </tr>
-                      <tr>
-                        <td>Mike Johnson</td>
-                        <td>mjohnson@gmail.com</td>
-                        <td>Dec 15, 2016</td>
-                        <td><a class="btn btn-default" href="edit.html">Edit</a> <a class="btn btn-danger" href="#">Delete</a></td>
-                      </tr>
-                    </table>
+               <!-- <form>
+                  <div class="form-group">
+                    <label>Page Title</label>
+                    <input type="text" class="form-control" placeholder="Page Title" value="About">
+                  </div>
+                  <div class="form-group">
+                    <label>Page Body</label>
+                    <textarea name="editor1" class="form-control" placeholder="Page Body">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </textarea>
+                  </div>
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox" checked> Published
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <label>Meta Tags</label>
+                    <input type="text" class="form-control" placeholder="Add Some Tags..." value="tag1, tag2">
+                  </div>
+                  <div class="form-group">
+                    <label>Meta Description</label>
+                    <input type="text" class="form-control" placeholder="Add Meta Description..." value="  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et ">
+                  </div>
+                  <input type="submit" class="btn btn-default" value="Submit">
+                </form>-->
               </div>
               </div>
 
@@ -150,7 +148,7 @@
     </section>
 
     <footer id="footer">
-      <p>Copyright AdminStrap, &copy; 2017</p>
+      <p>Copyright IUT Snap, &copy; 2019</p>
     </footer>
 
     <!-- Modals -->
