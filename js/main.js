@@ -11,9 +11,7 @@ var config = {
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
-
-      document.getElementById("logins").action="index.html";
-      
+      return true;   
   } 
     else {
     // No user is signed in.

@@ -119,24 +119,19 @@ body{
     height: 10%;
     margin-left: 45%;
 }
-.btncolor{
-   
-    background-color: #0e59a3;
+input[type=submit] {
+  width: 100%;
+  background-color: #5099ef;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 2px;
+  cursor: pointer;
 }
-.btncolor:hover{
-    transform: scale(1); 
-    background-color: #248e24;
+input[type=submit]:hover {
+  background-color: #0e59a3;
 }
-
-
-
-
-
-
-
-
-
-
 
 /*-----------------overwrites-------------------------*/
 
